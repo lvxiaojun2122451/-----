@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>航站查询</title>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link href="css/index.css" rel="stylesheet" />
+    <script>
+		//document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.2+ 'px';
+	</script>
+</head>
+<body>
+	<div class="header">
+		时刻查询
+	</div>
+	<div class="body">
+		<div class="head2"></div>
+		<ul class="data_ul">
+			<li class="clear">
+				<span class="span_title">航班号:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写航班号（必填）">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">注册号:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写注册号">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">航空公司:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写航空公司（必填）">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">机型:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写机型（必填）">
+				</div>
+			</li>
+		</ul>
+		
+		<div class="head"></div>
+		
+		<ul class="data_ul">
+			<li class="clear">
+				<span class="span_title">起飞机场:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写起飞机场（必填）">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">起飞时刻:</span>
+				<div class="div_box">
+					<input class="ipt_text1" type="text" placeholder="时刻">
+					<span class="span_dao">到</span>
+					<input class="ipt_text1" type="text" placeholder="时刻">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">降落机场:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写降落机场（必填）">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">降落时刻:</span>
+				<div class="div_box">
+					<input class="ipt_text1" type="text" placeholder="时刻">
+					<span class="span_dao">到</span>
+					<input class="ipt_text1" type="text" placeholder="时刻">
+				</div>
+			</li>
+		</ul>
+		
+		<div class="head"></div>
+		
+		<ul class="data_ul">
+			<li class="clear">
+				<span class="span_title">周期:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写周期">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">起止时间:</span>
+				<div class="div_box">
+					<input class="ipt_text" id="datetime-picker" type="text" placeholder="请填写起止时间">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">截止时间:</span>
+				<div class="div_box">
+					<input class="ipt_text" id="datetime-picker1" type="text" placeholder="请填写截止时间">
+				</div>
+			</li>
+		</ul>
+		
+		<div class="head"></div>
+		
+		<ul class="data_ul">
+			<li class="clear">
+				<span class="span_title">计划状态:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>状态一</option>
+						<option>状态二</option>
+						<option>状态三</option>
+						<option>状态四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">时刻状态:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>状态一</option>
+						<option>状态二</option>
+						<option>状态三</option>
+						<option>状态四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">航时状态:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>状态一</option>
+						<option>状态二</option>
+						<option>状态三</option>
+						<option>状态四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">航路状态:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>状态一</option>
+						<option>状态二</option>
+						<option>状态三</option>
+						<option>状态四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">航权状态:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>状态三</option>
+						<option>状态二</option>
+						<option>状态三</option>
+						<option>状态四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">报文状态:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>状态四</option>
+						<option>状态二</option>
+						<option>状态三</option>
+						<option>状态四</option>
+					</select>
+				</div>
+			</li>
+		</ul>
+		
+		<div class="head"></div>
+		
+		<ul class="data_ul">
+			<li class="clear">
+				<span class="span_title">计划类型:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>类型一</option>
+						<option>类型二</option>
+						<option>类型三</option>
+						<option>类型四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">计划种类:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>类型一</option>
+						<option>类型二</option>
+						<option>类型三</option>
+						<option>类型四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">任务性质:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>类型一</option>
+						<option>类型二</option>
+						<option>类型三</option>
+						<option>类型四</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">国籍:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>中国</option>
+						<option>美国</option>
+						<option>法国</option>
+						<option>英国</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">区域:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+						<option>D</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">协调机场计划:</span>
+				<div class="div_box">
+					<select class="sele_sele">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+						<option>D</option>
+					</select>
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">是否绕飞航班:</span>
+				<div class="div_box">
+					<input type="checkbox" />
+				</div>
+			</li>
+			
+		</ul>
+		
+		<div class="head"></div>
+		
+		<ul class="data_ul">
+			<li class="clear">
+				<span class="span_title">任务名:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写周期">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">批准号:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写起止时间">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">编辑日期:</span>
+				<div class="div_box">
+					<input class="ipt_text" type="text" placeholder="请填写截止时间">
+				</div>
+			</li>
+			<li class="clear">
+				<span class="span_title">备注:</span>
+				<div class="div_box">
+					<input class="ipt_text" id="datetime-picker2" type="text" placeholder="请填写截止时间">
+				</div>
+			</li>
+		</ul>
+		
+		<div class="head1"></div>
+		
+		
+		
+	</div>
+	<div class="foot">
+		<a href="javascript:void(0);">查询</a>
+		<a class="a1" href="javascript:void(0);">清空</a>
+	</div>
+</body>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+$("#datetime-picker").datetimePicker({
+	value: ['1985', '12', '04', '9', '34']
+});
+$("#datetime-picker1").datetimePicker({
+	value: ['1985', '12', '04', '9', '34']
+});
+$("#datetime-picker2").datetimePicker({
+	value: ['1985', '12', '04', '9', '34']
+});
+</script>
+</html>
